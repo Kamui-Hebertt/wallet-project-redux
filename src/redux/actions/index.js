@@ -1,4 +1,4 @@
-// Coloque aqui suas actions
+import fetchCurrencyApi from '../../services/api';
 
 export const USER = 'USER';
 export const emailLogin = (state) => ({
@@ -8,17 +8,22 @@ export const emailLogin = (state) => ({
 
 // WALLET
 
+export const REQUEST_CURRENCY = 'REQUEST_CURRENCY';
 export const CURRENCY_REQUEST = 'CURRENCY_REQUEST';
+export const ADD_EXPENSES = 'ADD_EXPENSES';
 
-export const currecyRequest = () => ({
-  type: CURRENCY_REQUEST,
+export const requestCurrency = () => ({
+  type: REQUEST_CURRENCY,
 });
 
-export const CURRENCY_REQUEST_SUCESS = 'CURRENCY_REQUEST_SUCESS';
-
-export const requestSucessful = (currencies) => ({
-  type: CURRENCY_REQUEST_SUCESS,
+export const currencyRequest = (currencies) => ({
+  type: CURRENCY_REQUEST,
   currencies,
+});
+
+export const setExpenses = (expenses) => ({
+  type: ADD_EXPENSES,
+  expenses,
 });
 
 export const CURRENCY_REQUEST_FAIL = 'CURRENCY_REQUEST_FAIL';
@@ -27,17 +32,12 @@ export const requestFail = (error) => ({
   error,
 });
 
-export function fetchCurrency() {
-  return async (dispatch) => {
-    dispatch(currecyRequest());
-    try {
-      const response = await fetch('https://economia.awesomeapi.com.br/json/all');
-      const jsonResponse = await response.json();
-      const filtering = Object.keys(jsonResponse)
-        .filter((elementCurrency) => elementCurrency !== 'USDT');
-      dispatch(requestSucessful(filtering));
-    } catch (error) {
-      dispatch(requestFail(error));
-    }
-  };
-}
+export const currencyAction = () => async (dispatch) => {
+  dispatch(requestCurrency());
+  try {
+    const response = await fetchCurrencyApi();
+    dispatch(currencyRequest(response));
+  } catch (error) {
+    dispatch(requestFail(error));
+  }
+};

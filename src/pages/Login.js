@@ -23,6 +23,7 @@ class Login extends React.Component {
 
   toValidateFields = () => {
     const { password, email } = this.state;
+
     const six = 6;
     const regexEmail = /^\S+@\S+\.\S+$/;
     if (password.length >= six && email.match(regexEmail)) {
