@@ -5,6 +5,7 @@ import {
   CURRENCY_REQUEST,
   ADD_EXPENSES,
   REQUEST_CURRENCY,
+  REMOVE_EXPENSES,
 }
   from '../actions';
 
@@ -28,8 +29,15 @@ const walletReducer = (state = WALLET_INICIAL_STATE, action) => {
   case ADD_EXPENSES:
     return {
       ...state,
-      expenses: [...state.expenses.filter((object) => object.currency !== ''),
-        { id: state.expenses.length, ...action.expenses }],
+      expenses: [...state.expenses
+        .filter((elementExpense) => elementExpense.currency !== ''),
+      { id: state.expenses.length, ...action.expenses }],
+    };
+  case REMOVE_EXPENSES:
+    return {
+      ...state,
+      expenses: [...state.expenses.filter((elementExpense) => elementExpense.id // retorna false
+         !== Number(action.removing))],
     };
   default: return state;
   }

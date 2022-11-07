@@ -11,6 +11,12 @@ export const emailLogin = (state) => ({
 export const REQUEST_CURRENCY = 'REQUEST_CURRENCY';
 export const CURRENCY_REQUEST = 'CURRENCY_REQUEST';
 export const ADD_EXPENSES = 'ADD_EXPENSES';
+export const REMOVE_EXPENSES = 'REMOVE_EXPENSES';
+
+export const removingExpenses = (removing) => ({
+  type: REMOVE_EXPENSES,
+  removing,
+});
 
 export const requestCurrency = () => ({
   type: REQUEST_CURRENCY,
