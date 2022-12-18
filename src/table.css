@@ -1,0 +1,41 @@
+:root {
+  --greenBtn : rgba(47, 193, 140, 1);
+  --contentBlue : rgba(0, 59, 229, 1);
+  --kindWhiteBack : rgb(255, 255, 255);
+}
+
+.allContentTable {
+  background-color: var(--contentBlue) ;
+  display: flex;
+  justify-content: center;
+  color: var(--greenBtn);
+  
+  
+
+}
+.allContentTable thead {
+  color: var(--kindWhiteBack);
+  font-family: "Poppins";
+  font-size: small;
+  gap: 5px;
+
+}
+
+.trash {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.edit {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tableDeleteE{
+  margin-right: -5vw;
+  border-left-style:groove ;
+  
+}

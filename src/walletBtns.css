@@ -1,0 +1,154 @@
+:root {
+  --greenBtn : rgba(47, 193, 140, 1);
+  --contentBlue : rgba(0, 59, 229, 1);
+  --kindWhiteBack : rgb(255, 255, 255);
+}
+
+
+.walletBtns {
+  height: 49vh;
+  padding-top: 30px;
+  background-color: var(--kindWhiteBack);
+  font-family: "Poppins";
+  color: var(--contentBlue);
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  
+}
+
+
+.walletBtns button {
+  background-color: var(--greenBtn);
+  color: whitesmoke;
+  width: 330px;
+  height: 40px;
+  font-family: "Poppins";
+  border-color: var(--greenBtn);
+  border-radius: 4px;
+  transition: 0.5s;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.walletBtns input::placeholder {
+  color: var(--contentBlue);
+  opacity: 0.5;
+}
+.walletBtns input {
+  border-color: var(--contentBlue);
+  width: 288px;
+  height: 30px;
+}
+
+.walletBtns input:focus {
+  border-color: var(--greenBtn);
+  outline: none;
+}
+
+.walletBtns select:focus {
+  border-color: var(--greenBtn);
+  outline: none;
+
+}
+
+.walletBtns select {
+  border-color: var(--contentBlue);
+  width: 288px;
+  height: 30px;
+  color: var(--contentBlue);
+ 
+}
+
+.btn {
+
+  height: 10vh;
+  justify-content: center;
+  background-color: var(--kindWhiteBack);
+  margin-left: 35vw;
+  margin-bottom: -30vh;
+}
+
+.walletBtns button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.input1 {
+  display: flex;
+  align-items: center;
+  width: 25vw;
+ height: 80px;
+  margin-left: 2vw;
+}
+.input1 > p {
+  
+}
+
+.input2 {
+  display: flex;
+  width: 40vw;
+
+  margin-left: 23vw;
+  margin-top: -67px;
+  
+ 
+}
+.select1 {
+  display: flex;
+  width: 350vw;
+  margin-left: 65vw;
+  margin-top: -67px;
+  display: flex;
+  align-items: center;
+}
+.select1 > select {
+ 
+  margin-left: 19px;
+  margin-bottom: 25px;
+  width: 12vw;
+}
+.select1 p {
+  margin-left: 30px;
+}
+
+.select2 {
+  margin-top: 5px;
+  display: flex;
+  width: 30vw;
+  display: flex;
+  gap: 10px;
+  margin-left: 2vw;
+}
+.select2 select{
+  width: 160px;
+}
+
+.select3 {
+  display: flex;
+  width: 25vw;
+  height: 10vh;
+  display: flex;
+  gap: 10px;
+  margin-top: -30px;
+  margin-left: 25vw;
+}
+
+
+
+.input1 input {
+  
+  margin-left: 10px;
+  width: 200px;
+}
+
+
+.input2 input {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 40vw;
+}
+.select1 select {
+  margin-top: 25px;
+
+}

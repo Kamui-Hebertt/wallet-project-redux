@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Array } from 'prop-types';
 import { removingExpenses } from '../redux/actions';
+import trash from './trash.png';
+import edit from './edit.png';
 
 class Table extends Component {
   handleRemoveFunc = ({ target: { id } }) => {
@@ -13,19 +15,19 @@ class Table extends Component {
     const { expenses } = this.props;
     // console.log(expenses);
     return (
-      <div>
+      <div className="allContentTable">
         <table>
           <thead>
             <tr>
-              <th>Descrição</th>
-              <th>Tag</th>
-              <th>Método de pagamento</th>
-              <th>Valor</th>
-              <th>Moeda</th>
-              <th>Câmbio utilizado</th>
-              <th>Valor convertido</th>
-              <th>Moeda de conversão</th>
-              <th>Editar/Excluir</th>
+              <th className="tableDeleteE">Descrição</th>
+              <th className="tableDeleteE">Tag</th>
+              <th className="tableDeleteE">Método de pagamento</th>
+              <th className="tableDeleteE">Valor</th>
+              <th className="tableDeleteE">Moeda</th>
+              <th className="tableDeleteE">Câmbio utilizado</th>
+              <th className="tableDeleteE">Valor convertido</th>
+              <th className="tableDeleteE">Moeda de conversão</th>
+              <th className="tableDeleteE">Editar/Excluir</th>
 
             </tr>
           </thead>
@@ -57,18 +59,20 @@ class Table extends Component {
                   <button
                     type="button"
                     id={ elementExpense.id }
+                    className="edit"
                   >
-                    Editar
+                    <img src={ edit } alt="edit" />
 
                   </button>
 
                   <button
+                    className="trash"
                     data-testid="delete-btn"
                     type="button"
                     id={ elementExpense.id }
                     onClick={ this.handleRemoveFunc }
                   >
-                    Excluir
+                    <img src={ trash } alt="tash" />
 
                   </button>
 
