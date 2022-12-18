@@ -1,6 +1,7 @@
 import React from 'react';
 import { func } from 'prop-types';
 import { connect } from 'react-redux';
+import logo from '../logo.png';
 
 import { emailLogin } from '../redux/actions';
 
@@ -33,56 +34,57 @@ class Login extends React.Component {
     }
   };
 
-  // submitBtn = (e) => {
-  //  e.preventDefault();
-  //  const { email } = this.state;
-  //   const { dispatch, history } = this.props;
-  //   dispatch(emailLogin({ email }));
-  //   const { push } = history;
-  //   push('/carteira');
-  // };
-
   render() {
     const { history, user } = this.props;
     const { password, email, locked } = this.state;
     return (
-      <div>
-        <label htmlFor="emailinput">
-          Email:
-          <input
-            value={ email }
-            name="email"
-            type="email"
-            data-testid="email-input"
-            id="email-input"
-            onChange={ this.handleChanger }
-          />
-        </label>
-        <label htmlFor="passwordinput">
-          Senha:
-          <input
-            value={ password }
-            name="password"
-            type="password"
-            data-testid="password-input"
-            id="passwordinput"
-            onChange={ this.handleChanger }
+      <div className="allLoginContent">
+        <div className="form">
+          <img src={ logo } className="logo" alt="logo" />
+          <label htmlFor="emailinput">
+            <div className="theEmail">
+              <p> Email:</p>
+              <input
+                className="firstInput"
+                value={ email }
+                name="email"
+                type="email"
+                placeholder="Email"
+                data-testid="email-input"
+                id="email-input"
+                onChange={ this.handleChanger }
+              />
+            </div>
+          </label>
+          <label htmlFor="passwordinput">
+            <div className="thePass">
+              <p>Senha:</p>
+              <input
+                value={ password }
+                name="password"
+                placeholder="Password"
+                type="password"
+                data-testid="password-input"
+                id="passwordinput"
+                onChange={ this.handleChanger }
 
-          />
-        </label>
-        <button
-          type="button"
-          onClick={ () => {
-            history.push('/carteira');
-            user(this.state);
-          } }
-          disabled={ locked }
-        >
-          Entrar
-          {' '}
+              />
+            </div>
+          </label>
+          <button
+            type="button"
+            onClick={ () => {
+              history.push('/carteira');
+              user(this.state);
+            } }
+            disabled={ locked }
+          >
+            Entrar
+            {' '}
 
-        </button>
+          </button>
 
+        </div>
       </div>
     );
   }
