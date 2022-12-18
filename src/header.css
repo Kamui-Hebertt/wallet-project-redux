@@ -1,0 +1,68 @@
+:root {
+  --greenBtn : rgba(47, 193, 140, 1);
+  --contentBlue : rgba(0, 59, 229, 1);
+  --kindWhiteBack : rgb(255, 255, 255);
+}
+.logoimg {
+  width: 20wv;
+  height: 60px;
+  margin-right: 16vw;
+  margin-left: 2vw;
+  margin-bottom: 9vh;
+
+}
+.headerAll {
+
+  align-items: center;
+  background-color: var(--kindWhiteBack);
+  display: flex;
+  justify-content: center;
+  height: 25vh;
+
+
+}
+
+.expenses {
+
+  color: var(--contentBlue);
+  font-family: "Poppins";
+  display: flex;
+  width: 400px ;
+  z-index: 0;
+  margin-right: 5vw;
+}
+.expenses img {
+  height: 35px;
+  margin-top: 15px;
+}
+
+.expenses p {
+  margin-left: 10px;
+  
+}
+
+
+.profile {
+ 
+  margin-right: 5vw;
+  width: 25vw;
+  display: flex;
+  color: var(--greenBtn);
+  font-family: "Poppins";
+}
+
+.profile img {
+  height: 38px;
+  margin-top: 10px;
+}
+
+.profile p {
+  margin-left: 10px;
+}
+.br {
+  color: var(--contentBlue);
+ 
+ margin-left: 83vw;
+  width: 30px;
+  position: absolute;
+}

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { string, array } from 'prop-types';
+import logo from '../logo.png';
+import coins from './coins.png';
+import profile from './profile.png';
 
 class Header extends Component {
   render() {
@@ -14,15 +17,22 @@ class Header extends Component {
     }, 0);
 
     return (
-      <div>
-        Header
-        <div data-testid="email-field">
-          {email}
+      <div className="headerAll">
+        <img src={ logo } alt="alt" className="logoimg" />
+        <div data-testid="email-field" className="profile">
+          <img src={ profile } alt="profile" />
+          <p>{email}</p>
         </div>
-        <div data-testid="total-field">
-          {totalExpensives.toFixed(2) || (0)}
+        <div data-testid="total-field" className="expenses">
+          <img src={ coins } alt="coins" />
+          <p>Total de despesas:</p>
+          {' '}
+          <p className="number">
+            {' '}
+            {totalExpensives.toFixed(2) || (0)}
+          </p>
         </div>
-        <div data-testid="header-currency-field">
+        <div data-testid="header-currency-field" className="br">
           <p>BRL</p>
         </div>
       </div>

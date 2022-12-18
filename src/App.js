@@ -5,6 +5,7 @@ import './App.css';
 import './walletBtns.css';
 import './table.css';
 import Wallet from './pages/Wallet';
+import './header.css';
 
 function App() {
   return (
