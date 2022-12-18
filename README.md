@@ -10,7 +10,7 @@ In this project i had developed a wallet that convert diferents options of curre
 
 - RTL tests was used.
 
-project link/deployment:
+project link/deployment: https://wallet-project-redux.vercel.app/
 
 
 
@@ -30,3 +30,5 @@ Neste projeto desenvolvi uma carteira que coverte diferentes opções de moedas,
 - Este projeto foi desenvolvido por mim e para a trybe.
 
 - Testes RTL foram usados.
+
+- link do projeto/ deploy : https://wallet-project-redux.vercel.app/
